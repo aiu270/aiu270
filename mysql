@@ -1,0 +1,47 @@
+mysql> use zhangjiahe;
+Database changed
+mysql> describe zhangjiahe;
++---------+----------+------+-----+---------+-------+
+| Field   | Type     | Null | Key | Default | Extra |
++---------+----------+------+-----+---------+-------+
+| bianhao | int      | YES  |     | NULL    |       |
+| name    | char(20) | YES  |     | NULL    |       |
+| xuehao  | int      | YES  |     | NULL    |       |
++---------+----------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> show tables;
++----------------------+
+| Tables_in_zhangjiahe |
++----------------------+
+| zhangjiahe           |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> select*from zhangjiahe;
+Empty set (0.00 sec)
+
+mysql> insert into zhangjiahe values
+    -> (1,'张家赫',12),
+    -> (2,'曹恒',15),
+    -> (3,'方浩燃',3),
+    -> (4,'张博文',2),
+    -> (5,'钟子健',4),
+    -> (6,'冯泽涛',7);
+Query OK, 6 rows affected (0.01 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> select*from zhangjiahe;
++---------+-----------+--------+
+| bianhao | name      | xuehao |
++---------+-----------+--------+
+|       1 | 张家赫    |     12 |
+|       2 | 曹恒      |     15 |
+|       3 | 方浩燃    |      3 |
+|       4 | 张博文    |      2 |
+|       5 | 钟子健    |      4 |
+|       6 | 冯泽涛    |      7 |
++---------+-----------+--------+
+6 rows in set (0.00 sec)
+
+mysql>
